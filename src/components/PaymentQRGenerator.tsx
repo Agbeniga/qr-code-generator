@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import QRCode from 'qrcode'
+import { sampleBanks } from '@/utils/banks'
 
 interface Bank {
   code: string
@@ -44,19 +45,19 @@ const PaymentQRGenerator: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   // Sample banks fallback
-  const sampleBanks: Bank[] = [
-    { code: "044", name: "Access Bank" },
-    { code: "050", name: "Eco Bank" },
-    { code: "070", name: "Fidelity" },
-    { code: "011", name: "First Bank" },
-    { code: "214", name: "FCMB" },
-    { code: "058", name: "GTB" },
-    { code: "076", name: "Polaris Bank" },
-    { code: "232", name: "Sterling" },
-    { code: "033", name: "UBA" },
-    { code: "035", name: "Wema Bank" },
-    { code: "057", name: "Zenith" }
-  ]
+//   const sampleBanks: Bank[] = [
+//     { code: "044", name: "Access Bank" },
+//     { code: "050", name: "Eco Bank" },
+//     { code: "070", name: "Fidelity" },
+//     { code: "011", name: "First Bank" },
+//     { code: "214", name: "FCMB" },
+//     { code: "058", name: "GTB" },
+//     { code: "076", name: "Polaris Bank" },
+//     { code: "232", name: "Sterling" },
+//     { code: "033", name: "UBA" },
+//     { code: "035", name: "Wema Bank" },
+//     { code: "057", name: "Zenith" }
+//   ]
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
