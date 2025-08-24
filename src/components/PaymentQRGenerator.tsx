@@ -33,11 +33,11 @@ const PaymentQRGenerator: React.FC = () => {
   
   // API Configuration
   const [apiConfig, setApiConfig] = useState({
-     baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL,
-  phoneNumber: process.env.API_PHONE_NUMBER,
-  pin: process.env.API_PIN,
-  accountNumber: process.env.API_ACCOUNT_NUMBER,
-  deviceId: process.env.API_DEVICE_ID
+    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL || '',
+    phoneNumber: process.env.NEXT_PUBLIC_API_PHONE_NUMBER || '',
+    pin: process.env.NEXT_PUBLIC_API_PIN || '',
+    accountNumber: process.env.NEXT_PUBLIC_API_ACCOUNT_NUMBER || '',
+    deviceId: process.env.NEXT_PUBLIC_API_DEVICE_ID || ''
   })
 
   const dropdownRef = useRef<HTMLDivElement>(null)
